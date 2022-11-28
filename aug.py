@@ -9,6 +9,14 @@ mekkora volt az átlag hőmérséklet?
 mekkora volt a hőingadoszás?
 Fájl írás'''
 
+with open ('H:/uj/ld.txt','w', encoding = 'utf-8') as file:
+    file.write('fok')
+
+wr = open('uj/ld.txt','w')
+wr.write('fájlírás')
+wr.close()
+
+
 havih = 31
 if havih >= 31:
     print('igen')
@@ -34,7 +42,3 @@ osszeg = 0
 for num in aug:
     osszeg = osszeg + num
 print(osszeg/31, 'Celsius fok volt az átlag havi hőmérséklet')
-
-
-with open ('H:/uj/ld.txt','w', encoding = 'utf-8') as file:
-    file.write('fok')
