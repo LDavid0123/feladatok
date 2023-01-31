@@ -1,10 +1,20 @@
-allat1=input('Add meg egy állatfaj nevét! ')
-kg=int(input('Hány kilogramm a tömege egy példánynak? '))
-allat2=input('Add meg egy állatfaj nevét! ')
-kg2=int(input('Hány kilogramm a tömege egy példánynak? '))
-allat3=input('Add meg egy állatfaj nevét! ')
-kg3=int(input('Hány kilogramm a tömege egy példánynak? '))
+import allat
 
-print('A (z)' ,allat1, 'tömege' ,kg)
-print('A (z)' ,allat2, 'tömege' ,kg2)
-print('A (z)' ,allat3, 'tömege' ,kg3)
+állatfajok = []
+
+for _ in range(3):
+    fajnév = input('Add meg egy állatfaj nevét! ')
+    tömeg = input('Hány kilogramm a tömege egy példánynak? ')
+    állatfaj = allat.Állatfaj(fajnév, tömeg)
+    állatfajok.append(állatfaj)
+
+legnehezebb_állat = állatfajok[0]
+
+for állatfaj in állatfajok:
+    print('A(z) ', állatfaj.fajnév, ' tömege ', állatfaj.tömeg, ' kg.', sep='')
+    if állatfaj.tömeg > legnehezebb_állat.tömeg:
+       legnehezebb_állat = állatfaj
+    
+célfájl = open('legnehezebb.txt', 'w')
+print('A(z)', legnehezebb_állat.fajnév, 'a legnehezebb.', file=célfájl)
+célfájl.close()
