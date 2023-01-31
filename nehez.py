@@ -1,0 +1,10 @@
+allat1=input('Add meg egy állatfaj nevét! ')
+kg=int(input('Hány kilogramm a tömege egy példánynak? '))
+allat2=input('Add meg egy állatfaj nevét! ')
+kg2=int(input('Hány kilogramm a tömege egy példánynak? '))
+allat3=input('Add meg egy állatfaj nevét! ')
+kg3=int(input('Hány kilogramm a tömege egy példánynak? '))
+
+print('A (z)' ,allat1, 'tömege' ,kg)
+print('A (z)' ,allat2, 'tömege' ,kg2)
+print('A (z)' ,allat3, 'tömege' ,kg3)
