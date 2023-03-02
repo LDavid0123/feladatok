@@ -1,0 +1,1 @@
+print('Nagybetűsen:', input('Kérelek adj meg egy szót! ').upper())
